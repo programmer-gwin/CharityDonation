@@ -16,7 +16,6 @@ firebase.initializeApp(firebaseConfig);
 
 getData();
 
-<<<<<<< HEAD
 function setData() {
     firebase.database().ref("PAYMENT_SUMMARY/").set({
         EducationPercentage: "0.00",
@@ -77,8 +76,6 @@ function setDataView(model) {
 
 }
 
-=======
->>>>>>> 49e2db0566f65c1614b5a0d12e085d3a7590d9ac
 function submitForm() {
     // Initiate Variables With Form Content 
     var mname = $("#name").val().toString();
@@ -91,11 +88,7 @@ function submitForm() {
         submitMSG(false, "Did you fill in the form properly?");
     }
     else {
-<<<<<<< HEAD
         firebase.database().ref("UNVERIFIED_PAYMENT/").push({
-=======
-        firebase.database().ref("VERIFIED_PAYMENT/").push({
->>>>>>> 49e2db0566f65c1614b5a0d12e085d3a7590d9ac
             Name: mname,
             Phone_No: mphone,
             Date_of_Donation: mdate,
@@ -113,11 +106,7 @@ function submitForm() {
     // getData();
 }
 
-<<<<<<< HEAD
 function getDataList() {
-=======
-function getData() {
->>>>>>> 49e2db0566f65c1614b5a0d12e085d3a7590d9ac
     firebase.database().ref('VERIFIED_PAYMENT').once('value', function (mresponse) {
         mresponse.forEach(function (child) {
             //child.Date_of_Donation = new Date(child.Date_of_Donation).toLocaleDateString('en-GB');
